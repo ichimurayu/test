@@ -19,8 +19,3 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           default_bump: "minor"
-      - name: Tag push
-        run: |
-          echo ${{ steps.tag_version.outputs.new_tag }} > TAG_NAME
-          git tag $(cat TAG_NAME)
-          git push origin $(cat TAG_NAME)
