@@ -3,8 +3,7 @@ name: Create Git Tag
 on:
   push:
     branches:
-      - release-test
-      - release-hoge
+      - release-*
 
 jobs:
   create-git-tag:
